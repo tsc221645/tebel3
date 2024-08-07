@@ -1,0 +1,26 @@
+version: "3"
+services:
+    app:
+        build:
+            context: ./
+            dockerfile: dockerfiles/app/Dockerfile
+        volumes:            
+            - "./:/var/www"
+        links:
+          - redis
+        ports:
+          - "80:81"
+          - "5173:5173"
+    redis:
+      image: redis:5.0
+
+    postgres:
+      image: postgres:latest
+      ports:
+        - 5433:5432
+      volumes:
+        - ~/apps/postgres:/var/lib/postgresql/data
+      environment:
+        - POSTGRES_PASSWORD=1234
+        - POSTGRES_USER=user
+        - POSTGRES_DB=base01
