@@ -10,7 +10,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ShipmentController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('csvimport');
 });
 
 
@@ -32,3 +32,10 @@ Route::get('productos',[ProductosController::class, 'index'])->name('productos.i
 Route::get('misionvision',[MisionVisionController::class, 'index'])->name('misionvision.index');
 Route::get('about',[AboutController::class, 'index'])->name('about.index');
 Route::get('shipment',[ShipmentController::class, 'index'])->name('shipment.index');
+
+//Ruta para el importador
+Route::resource('producto', ProductosController::class);
+Route::get('/import', function () {
+    return view('csvimport');
+});
+Route::post('import-csv', [ProductosController::class, 'importCSV'])->name('import');

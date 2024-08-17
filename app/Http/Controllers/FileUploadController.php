@@ -4,14 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProductosController extends Controller
+class FileUploadController extends Controller
 {
-    public function index()
-    {
-        $productos = Product::paginate(10);
-        return view('index', compact('products'));
-    }
-
     public function importCSV(Request $request)
     {
         $request->validate([
@@ -69,3 +63,4 @@ class ProductosController extends Controller
     }
     
 }
+

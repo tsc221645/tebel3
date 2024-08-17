@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->integer('CODIGO_PT');
+            $table->string('NOMBRE_PRODUCTO');
+            $table->float('PRECIO');
+            $table->integer('FACTOR_CONVERSION_EXISTENCIA');
+            $table->float('PESO_UNIDAD_MAYOR');
+            $table->float('VOLUMEN_UNIDAD_MAYOR');
+            $table->float('PRECIO_UNITARIO');
             $table->timestamps();
         });
     }
