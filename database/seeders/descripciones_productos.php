@@ -20,7 +20,7 @@ class descripciones_productos extends Seeder
             ['name' => 'Industrial'],
             ['name' => 'Ferreteria'],
             ['name' => 'Limpieza'],
-            ['name' => 'Calzado']
+            ['name' => '']
             
         ]);
 
@@ -57,8 +57,8 @@ class descripciones_productos extends Seeder
                 'category_id' => 1,
                 'line_id' => 1, // Valor nulo para 'line_id'
                 'popular' => false, // Valor predeterminado para 'popular'
-            ], */
-            /*
+            ], 
+            
            [
                 'name' => 'CERA LÍQUIDA PARA LUSTRAR',
                 'url_products' => "", // Valor nulo para 'url_products'
