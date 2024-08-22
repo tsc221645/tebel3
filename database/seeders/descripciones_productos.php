@@ -13,12 +13,14 @@ class descripciones_productos extends Seeder
      */
     public function run(): void
     {
+        /*
         DB::table('categories')->insert([
             ['name' => 'Automotriz'],
             ['name' => 'Hogar'],
             ['name' => 'Industrial'],
             ['name' => 'Ferreteria'],
-            ['name' => 'Limpieza']
+            ['name' => 'Limpieza'],
+            ['name' => 'Calzado']
             
         ]);
 
@@ -55,7 +57,7 @@ class descripciones_productos extends Seeder
                 'category_id' => 1,
                 'line_id' => 1, // Valor nulo para 'line_id'
                 'popular' => false, // Valor predeterminado para 'popular'
-            ], 
+            ], */
             /*
            [
                 'name' => 'CERA LÍQUIDA PARA LUSTRAR',
@@ -66,69 +68,7 @@ class descripciones_productos extends Seeder
                 'line_id' => "", // Valor nulo para 'line_id'
                 'popular' => false, // Valor predeterminado para 'popular'
             ],
-            [
-                'name' => 'RUG SHAMPOO',
-                'url_products' => "", // Valor nulo para 'url_products'
-                'description' => 'Formulado para limpiar  y/o lavar alfombras, muebles tapizados, ya sea de casa o del vehículo, de cualquier material textil,. Logra remover suciedad de los rincones mas profundos de dichos materiales.',
-                'price' => "", // Valor nulo para 'price'
-                'category_id' => 1,
-                'line_id' => "", // Valor nulo para 'line_id'
-                'popular' => false, // Valor predeterminado para 'popular'
-            ], 
-            [
-                'name' => 'CERA LÍQUIDA ANTIDESLIZANTE',
-                'url_products' => "", // Valor nulo para 'url_products'
-                'description' => 'Es una cera autobrillante formulada para obtener brillo y protección inmediata  en un solo paso aplicando y dejando secar sobre el piso  en el cual se lustra. Cuando es lustrado despues de su aplicación el brillo aumenta más. Con características antideslizantes para máxima seguridad. Para abrillantar y proteger pisos de granito, madera, cerámicos y otros.',
-                'price' => "", // Valor nulo para 'price'
-                'category_id' => 1,
-                'line_id' => "", // Valor nulo para 'line_id'
-                'popular' => false, // Valor predeterminado para 'popular'
-            ], 
-            [
-                'name' => 'CERA LÍQUIDA PARA PISOS DE LOZA',
-                'url_products' => "", // Valor nulo para 'url_products'
-                'description' => 'Diseñada para abrillantar y proteger pisos de baldosa barnizada color rojizo de ladrillo, barro, etc. Abrillanta y renueva el color de la baldosa por medio de un colorante, coloración original de la baldosa. Protége la baldosa contra las inclemencias del tiempo y tránsito de personas.',
-                'price' => "", // Valor nulo para 'price'
-                'category_id' => 1,
-                'line_id' => "", // Valor nulo para 'line_id'
-                'popular' => false, // Valor predeterminado para 'popular'
-            ], 
-            [
-                'name' => 'Desinfectante',
-                'url_products' => "", // Valor nulo para 'url_products'
-                'description' => 'Limpia, Desinfecta, Elimina virus y bacterias. Disponible en: Floral, Lavanda, Limón, Manzana y Neutro.',
-                'price' => "", // Valor nulo para 'price'
-                'category_id' => 2,
-                'line_id' => "", // Valor nulo para 'line_id'
-                'popular' => false, // Valor predeterminado para 'popular'
-            ], 
-            [
-                'name' => 'Jabón líquido para trastos',
-                'url_products' => "", // Valor nulo para 'url_products'
-                'description' => 'Lava, Quita grasa, Desinfecta. Disponible en: Limón y Frutos rojos.',
-                'price' => "", // Valor nulo para 'price'
-                'category_id' => 2,
-                'line_id' => "", // Valor nulo para 'line_id'
-                'popular' => false, // Valor predeterminado para 'popular'
-            ], 
-            [
-                'name' => 'Alcol Spray',
-                'url_products' => "", // Valor nulo para 'url_products'
-                'description' => 'Es un antibacterial y antiviral para desinfectar manos y superficies. Disponible en: 4 oz y 8 oz.',
-                'price' => "", // Valor nulo para 'price'
-                'category_id' => 2,
-                'line_id' => "", // Valor nulo para 'line_id'
-                'popular' => false, // Valor predeterminado para 'popular'
-            ], 
-            [
-                'name' => 'Refrigerantes Car Kool®',
-                'url_products' => "", // Valor nulo para 'url_products'
-                'description' => 'Es una solución acuosa de glicoles, inhibidores de corrosión y lubricantes que incrementan en más del doble la capacidad del sistema de enfriamiento, al aumentar su capacidad de transmisión de calor, elevando el punto de ebullición y protegiéndolo con su acción lubricante. El tratamiento para radiadores CAR-KOOL® con NPI (antidegradante químico protector), se puede utilizar en todo motor con sistema de enfriamiento por agua, ayudando a prevenir el recalentamiento bajo condiciones de extremo calor, situaciones de tráfico pesado y viajes por regiones montañosas.',
-                'price' => "", // Valor nulo para 'price'
-                'category_id' => 3,
-                'line_id' => "", // Valor nulo para 'line_id'
-                'popular' => false, // Valor predeterminado para 'popular'
-            ], 
+           
             [
                 'name' => 'Car Kool® 33%:',
                 'url_products' => "", // Valor nulo para 'url_products'
