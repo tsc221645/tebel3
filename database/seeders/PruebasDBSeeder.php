@@ -3,9 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB; // Importar el facade DB
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use DB;
 
-class DatabaseSeeder extends Seeder
+class PruebasDBSeeder extends Seeder
 {
     /**
      * Seed the application's database.
