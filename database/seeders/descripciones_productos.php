@@ -14,25 +14,49 @@ class descripciones_productos extends Seeder
     public function run(): void
     {
         DB::table('categories')->insert([
-            ['name' => 'Brio Wax'],
-            ['name' => 'Limpi-o'],
-            ['name' => 'Car Kool'],
-            ['name' => 'Prodin Ferreteria'],
-            ['name' => 'Shinola'],
-            ['name' => 'Vis']
+            ['name' => 'Automotriz'],
+            ['name' => 'Hogar'],
+            ['name' => 'Industrial'],
+            ['name' => 'Ferreteria'],
+            ['name' => 'Limpieza']
+            
         ]);
+
+        //Insert de linea del hogar (nueva - pruebas)
+        DB::table('lines')->insert([
+            ['name' => 'Automotriz', 'line_description' => 'Automotriz']
+        ]);
+        
+
+        //Insert de linea del hogar (nueva - pruebas)
+        DB::table('lines')->insert([
+            ['name' => 'Hogar', 'line_description' => 'Productos para el mantenimiento del hogar']
+        ]);
+
+        //Insert de linea de limpieza (nueva - pruebas)
+        DB::table('lines')->insert([
+            ['name' => 'Limpieza', 'line_description' => 'Productos para limpieza y sanitizacion']
+        ]);
+
+        //Insert de linea industrial (nueva - pruebas)
+        DB::table('lines')->insert([
+            ['name' => 'Industrial', 'line_description' => 'Productos de uso industrial']
+        ]);
+        
+
 
         DB::table('products')->insert([
            [
+                'id' => 1,
                 'name' => 'PASTA PARA LUSTRAR',
                 'url_products' => "", // Valor nulo para 'url_products'
                 'description' => 'Es una  mezcla de ceras cien por ciento naturales que producen una capa protectora de alta duración resistente a rayones menores así como a la penetración y crecimiento de mohos en las superficies en que es aplicada. Recomendada para abrillantar pisos de cemento, madera, parquet, linolio, granito y otros.',
-                'price' => "", // Valor nulo para 'price'
+                'price' => 0, // Valor nulo para 'price'
                 'category_id' => 1,
-                'line_id' => "", // Valor nulo para 'line_id'
+                'line_id' => 1, // Valor nulo para 'line_id'
                 'popular' => false, // Valor predeterminado para 'popular'
             ], 
-    
+            /*
            [
                 'name' => 'CERA LÍQUIDA PARA LUSTRAR',
                 'url_products' => "", // Valor nulo para 'url_products'
@@ -716,7 +740,7 @@ class descripciones_productos extends Seeder
                 'category_id' => 6,
                 'line_id' => "", // Valor nulo para 'line_id'
                 'popular' => false, // Valor predeterminado para 'popular'
-            ],
+            ],*/
         ]);
     }
 }
