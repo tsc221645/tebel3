@@ -680,8 +680,9 @@ class descripciones_productos extends Seeder
                 'category_id' => 6,
                 'line_id' => "", // Valor nulo para 'line_id'
                 'popular' => false, // Valor predeterminado para 'popular'
-            ],*/
+            ],
         ]);
+        */
     }
 }
 
