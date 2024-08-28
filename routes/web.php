@@ -8,9 +8,10 @@ use App\Http\Controllers\MisionVisionController;
 use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ShipmentController;
+use App\Http\Controllers\ProductImportController;
 
 Route::get('/', function () {
-    return view('csvimport');
+    return view('welcome');
 });
 
 
@@ -34,8 +35,8 @@ Route::get('about',[AboutController::class, 'index'])->name('about.index');
 Route::get('shipment',[ShipmentController::class, 'index'])->name('shipment.index');
 
 //Ruta para el importador
-Route::resource('producto', ProductosController::class);
 Route::get('/import', function () {
-    return view('csvimport');
+    return view('import');
 });
-Route::post('import-csv', [ProductosController::class, 'importCSV'])->name('import');
+
+Route::post('/import', [ProductImportController::class, 'import'])->name('products.import');

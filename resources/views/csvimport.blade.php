@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div>
-            <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/post') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="messages">
                   @if (session('success'))

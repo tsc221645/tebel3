@@ -10,6 +10,7 @@
         "laravel/framework": "^11.0",
         "laravel/octane": "^2.3",
         "laravel/tinker": "^2.9",
+        "maatwebsite/excel": "^3.1",
         "predis/predis": "^2.2"
     },
     "require-dev": {
