@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('administrators', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
+            $table->timestamps();
         });
 
         Schema::create('clients', function (Blueprint $table) {
@@ -30,17 +31,20 @@ return new class extends Migration
             $table->string('level_of_studies');
             $table->string('profession');
             $table->foreignId('user_id');
+            $table->timestamps();
         });
 
         Schema::create('lines', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->text('line_description');
+            $table->timestamps();
         });
 
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->timestamps();
         });
 
         Schema::create('products', function (Blueprint $table) {
@@ -52,18 +56,21 @@ return new class extends Migration
             $table->foreignId('category_id');
             $table->foreignId('line_id');
             $table->boolean('popular')->default(false);
+            $table->timestamps();
         });
 
         Schema::create('phone_numbers', function (Blueprint $table) {
             $table->id();
             $table->string('phone');
             $table->foreignId('user_id');
+            $table->timestamps();
         });
 
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->string('address');
             $table->foreignId('user_id');
+            $table->timestamps();
         });
 
         Schema::create('orders', function (Blueprint $table) {
@@ -73,6 +80,7 @@ return new class extends Migration
             $table->text('order_status');
             $table->text('shipping_info');
             $table->decimal('total', 20, 2);
+            $table->timestamps();
         });
 
         Schema::create('orders_details', function (Blueprint $table) {
@@ -81,12 +89,14 @@ return new class extends Migration
             $table->foreignId('product_id');
             $table->integer('quantity');
             $table->decimal('price',10, 2);
+            $table->timestamps();
         });
 
         Schema::create('shopping_cart', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_id');
             $table->foreignId('product_id');
+            $table->timestamps();
         });
 
         Schema::create('promotions', function (Blueprint $table) {
@@ -95,6 +105,7 @@ return new class extends Migration
             $table->string('promotion_type');
             $table->decimal('price', 10, 2);
             $table->foreignId('product');
+            $table->timestamps();
         });
 
     }
