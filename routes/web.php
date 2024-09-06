@@ -8,6 +8,8 @@ use App\Http\Controllers\MisionVisionController;
 use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ShipmentController;
+use App\Http\Controllers\InvoiceTestController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,6 +24,8 @@ Route::get('misionvision',[MisionVisionController::class, 'index']);
 Route::get('signup',[SignUpController::class, 'index']);
 Route::get('about',[AboutController::class, 'index']);
 Route::get('shipment',[ShipmentController::class, 'index']);
+Route::get('invoice', [InvoiceTestController::class, 'generateInvoice']);
+
 
 //Nombres de rutas para poder redirigir 
 
